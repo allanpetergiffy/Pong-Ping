@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Pong — Single Player</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Simple Pong — Single Player</h1>
+
+    <div id="scoreboard">
+      <div id="leftScore" class="score">0</div>
+      <div class="separator">—</div>
+      <div id="rightScore" class="score">0</div>
+    </div>
+
+    <canvas id="gameCanvas" width="960" height="560"></canvas>
+
+    <div class="controls">
+      Controls: Move your mouse over the canvas or drag on touch, or use Up / Down arrow keys. Space = Pause. X = Activate Super. Click or F to release while aiming.
+    </div>
+
+    <div class="toolbar">
+      <button id="btnPause" class="btn">Pause ⏸</button>
+      <button id="btnActivateSuper" class="btn primary">Activate Super (X)</button>
+      <button id="btnRestart" class="btn">Restart ↺</button>
+    </div>
+
+    <div class="statusbar">
+      <div id="levelDisplay" class="level">Level: 1</div>
+      <div id="chargeBar" class="charge">
+        <div id="chargeFill" class="charge-fill" style="width:0%"></div>
+        <div id="chargeLabel" class="charge-label">Charge: 0%</div>
+      </div>
+      <div id="unlocks" class="unlocks">Unlocked: shield</div>
+    </div>
+
+    <div class="legend" id="powerupLegend">
+      <strong>Power-ups:</strong>
+      <span class="pu fire">Fire</span>
+      <span class="pu multi">Multi</span>
+      <span class="pu shrink">Shrink</span>
+      <span class="pu teleport">Teleport</span>
+      <span class="pu sticky">Sticky</span>
+      <span class="pu reverse">Reverse</span>
+      <span class="pu slow">Slow</span>
+    </div>
+
+    <div class="hud">
+      <div id="effects" class="effects"></div>
+      <div id="combo" class="combo">Combo: 0</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
